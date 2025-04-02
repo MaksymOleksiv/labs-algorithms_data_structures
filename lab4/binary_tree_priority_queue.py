@@ -7,7 +7,7 @@ class Node:
         self.left = None
         self.right = None
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"<{self.key}: {self.priority}>"
 
 
@@ -119,15 +119,16 @@ class RedBlackTree:
         self.__view_res = []
         return res
 
-    def find_max_priority(self, node):
+    def find_max_priority(self, node) -> Node:
         while node.left != self.NIL:
             node = node.left
         return node
 
-    def pop(self):
+    def pop(self) -> Node:
         min_node = self.find_max_priority(self.root)
         if min_node != self.NIL:
             self._delete(min_node)
+        return min_node
 
     def _delete(self, node):
         original_color = node.color
