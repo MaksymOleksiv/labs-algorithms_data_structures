@@ -52,18 +52,3 @@ def client_server_latency(
 
 
     return min(res.values())
-
-
-NMel = (6, 6)
-client = (1, 2, 6)
-link = (
-    (1, 3, 10),
-    (3, 4, 80),
-    (4, 5, 50),
-    (5, 6, 20),
-    (2, 3, 40),
-    (2, 4, 100),
-)
-
-gr = client_server_latency(NMel, client, *link)
-print(gr)
