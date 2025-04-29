@@ -2,7 +2,7 @@ from priority_queue import PriorityQueue
 def client_server_latency(
         NM: tuple[int, int],
         clients: tuple[int, ...],
-        *links: tuple[int, int, int], ):
+        *links: tuple[int, int, int], ) -> int:
     """
     Calculate the latency between clients and servers.
     :param NM: a tuple of:
