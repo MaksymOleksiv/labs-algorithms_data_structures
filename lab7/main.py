@@ -30,6 +30,9 @@ def search_dfa(haystack: str, needle: str) -> list:
     state = 0
     result = []
 
+    if not needle:
+        return result
+
     for i, char in enumerate(haystack):
         if char in table[state]:
             state = table[state][char]
