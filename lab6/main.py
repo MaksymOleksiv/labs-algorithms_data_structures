@@ -51,4 +51,4 @@ def client_server_latency(
 
 
 
-    return min(res.values())
+    return min(res.values()) if res else 0
